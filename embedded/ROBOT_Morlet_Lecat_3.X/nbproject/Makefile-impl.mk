@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ROBOT_Morlet_Lecat#3.X
+PROJECTNAME=ROBOT_Morlet_Lecat_3.X
 
 # Active Configuration
 DEFAULTCONF=default

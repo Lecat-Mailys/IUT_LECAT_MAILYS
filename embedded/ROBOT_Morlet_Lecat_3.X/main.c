@@ -14,7 +14,7 @@
 #include "PWM.h"
 #include "Robot.h"
 #include "ADC.h"
-   unsigned char ADCConversionFinishedFlag;
+
 int main(void) {
     //Initialisation oscillateur
     InitOscillator();
@@ -40,9 +40,10 @@ int main(void) {
     LED_VERTE_2 = 1;
     //Boucle principale
     while (1) {
-        if(ADCConversionFinishedFlag){
-           ADCGetResult();
+        if (ADCIsConversionFinished()) {
             ADCClearConversionFinishedFlag();
+            unsigned int * result = ADCGetResult();
+
         }
 
     } // fin main
