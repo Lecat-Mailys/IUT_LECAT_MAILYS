@@ -12,7 +12,9 @@
 #include "IO.h"
 #include "Timer.h"
 #include "PWM.h"
+#include "Robot.h"
 
+   
 int main(void) {
     //Initialisation oscillateur
     InitOscillator();
@@ -21,7 +23,8 @@ int main(void) {
     InitTimer1();
     InitTimer23();
     InitPWM();
-    //PWMSetSpeed(20,0);
+    /*PWMSetSpeedConsigne(20,MOTEUR_GAUCHE);
+    PWMSetSpeedConsigne(20,MOTEUR_DROIT);*/
 
     LED_BLANCHE_1 = 0;
     LED_BLEUE_1 = 0;
