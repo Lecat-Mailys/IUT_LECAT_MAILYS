@@ -20,8 +20,8 @@ int main(void) {
     InitIO();
     InitTimer1();
     InitTimer23();
-    //InitPWM();
-    //PWMSetSpeed(20);
+    InitPWM();
+    //PWMSetSpeed(20,0);
 
     LED_BLANCHE_1 = 0;
     LED_BLEUE_1 = 0;
