@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=ROBOT_Morlet_Lecat.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/ROBOT_Morlet_Lecat.X.production.hex
+CND_ARTIFACT_NAME_default=ROBOT_Morlet_Lecat.X.production.
+CND_ARTIFACT_PATH_default=dist/default/production/ROBOT_Morlet_Lecat.X.production.

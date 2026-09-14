@@ -6,18 +6,20 @@
  */
 
 #ifndef ROBOT_H
-#define	ROBOT_H
+#define ROBOT_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+typedef struct robotStateBITS {
 
+    union {
 
-
-
-#ifdef	__cplusplus
-}
-#endif
-
-#endif	/* ROBOT_H */
-
+        struct {
+            unsigned char taskEnCours;
+            float vitesseGaucheConsigne;
+            float vitesseGaucheCommandeCourante;
+            float vitesseDroiteConsigne;
+            float vitesseDroiteCommandeCourante;
+        };
+    };
+} ROBOT_STATE_BITS;
+extern volatile ROBOT_STATE_BITS robotState;
+#endif /* ROBOT_H */

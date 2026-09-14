@@ -7,12 +7,36 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <xc.h>
+#include "ChipConfig.h"
+#include "IO.h"
+#include "Timer.h"
+#include "PWM.h"
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+int main(void) {
+    //Initialisation oscillateur
+    InitOscillator();
+    // Configuration des input et output (IO)
+    InitIO();
+    InitTimer1();
+    InitTimer23();
+    //InitPWM();
+    //PWMSetSpeed(20);
 
-    return (EXIT_SUCCESS);
+    LED_BLANCHE_1 = 0;
+    LED_BLEUE_1 = 0;
+    LED_ORANGE_1 = 0;
+    LED_ROUGE_1 = 0;
+    LED_VERTE_1 = 0;
+
+    LED_BLANCHE_2 = 1;
+    LED_BLEUE_2 = 1;
+    LED_ORANGE_2 = 1;
+    LED_ROUGE_2 = 1;
+    LED_VERTE_2 = 1;
+    //Boucle principale
+    while (1) {
+
+
+    } // fin main
 }
-
