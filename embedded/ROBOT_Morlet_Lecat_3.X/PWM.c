@@ -18,7 +18,6 @@ void InitPWM(void) {
     /* Enable PWM Module */
     PTCONbits.PTEN = 1;
 }
-
 /*void PWMSetSpeed(float vitesseEnPourcents,int moteur) {
     if (moteur==MOTEUR_GAUCHE){
     if (vitesseEnPourcents < 0) {
@@ -41,7 +40,6 @@ void InitPWM(void) {
     }
     }
 }*/
-
 void PWMSetSpeedConsigne(float vitesseEnPourcents, char moteur) {
     if (moteur == MOTEUR_GAUCHE) {
         robotState.vitesseGaucheConsigne = vitesseEnPourcents;

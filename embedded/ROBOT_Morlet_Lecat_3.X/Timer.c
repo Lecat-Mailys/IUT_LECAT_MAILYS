@@ -24,8 +24,9 @@ void InitTimer1(void) {
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void) {
     IFS0bits.T1IF = 0;
     LED_BLANCHE_1 = !LED_BLANCHE_1;
-//    PWMUpdateSpeed();
+    
     ADC1StartConversionSequence();
+    PWMUpdateSpeed();
 }
 //Initialisation d?un timer 32 bits
 
@@ -54,12 +55,12 @@ void __attribute__((interrupt, no_auto_psv)) _T3Interrupt(void) {
     toggle = !toggle;
     if (toggle) {
        /* PWMSetSpeed(20, 0);
-        PWMSetSpeed(20, 1);*/
-        
+        PWMSetSpeed(20, 1);
+        */
     PWMSetSpeedConsigne(20,MOTEUR_GAUCHE);
     PWMSetSpeedConsigne(20,MOTEUR_DROIT);
     } else {
-        /*PWMSetSpeed(-20, 0);
+      /*  PWMSetSpeed(-20, 0);
         PWMSetSpeed(-20, 1);*/
         
     PWMSetSpeedConsigne(-20,MOTEUR_GAUCHE);
