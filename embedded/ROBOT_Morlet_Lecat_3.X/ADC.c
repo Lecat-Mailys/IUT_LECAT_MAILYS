@@ -7,6 +7,7 @@
 #include "Timer.h"
 #include "PWM.h"
 #include "Robot.h"
+#include "main.h"
 
 unsigned char ADCResultIndex = 0;
 static unsigned int ADCResult[5];

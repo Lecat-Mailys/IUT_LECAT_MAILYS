@@ -3,6 +3,8 @@
 #include <xc.h>
 #include "IO.h"
 #include "PWM.h"
+#include "main.h"
+
 volatile ROBOT_STATE_BITS robotState;
 
 unsigned int talon = 50;

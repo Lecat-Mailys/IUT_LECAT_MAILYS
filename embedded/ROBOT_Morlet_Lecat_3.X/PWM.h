@@ -4,12 +4,10 @@
  *
  * Created on 14 septembre 2026, 08:37
  */
-
+#include "main.h"
 #ifndef PWM_H
 #define	PWM_H
-#define MOTEUR_DROIT 0
-#define MOTEUR_GAUCHE 1
-#define PWMPER 24.0
+
 
 void InitPWM(void);
 //void PWMSetSpeed(float vitesseEnPourcents, int moteur);

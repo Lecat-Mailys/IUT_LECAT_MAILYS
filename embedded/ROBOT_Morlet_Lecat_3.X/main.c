@@ -14,6 +14,7 @@
 #include "PWM.h"
 #include "Robot.h"
 #include "ADC.h"
+#include "main.h"
 
 int main(void) {
     //Initialisation oscillateur
@@ -36,6 +37,7 @@ int main(void) {
     LED_ORANGE_2 = 0;
     LED_ROUGE_2 = 0;
     LED_VERTE_2 = 0;
+    SetFreqTimer1(2);
     //Boucle principale
     unsigned int * result;
     //static int adcValue0;
@@ -74,6 +76,7 @@ int main(void) {
                 LED_ROUGE_2 = 0;
             }
         }
+
 
     }
 }// fin main

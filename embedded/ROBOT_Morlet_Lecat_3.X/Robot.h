@@ -7,7 +7,7 @@
 
 #ifndef ROBOT_H
 #define ROBOT_H
-
+#include "main.h"
 
 
 void PWMUpdateSpeed();
