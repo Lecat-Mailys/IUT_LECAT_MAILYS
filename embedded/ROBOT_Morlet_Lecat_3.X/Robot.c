@@ -8,7 +8,7 @@
 volatile ROBOT_STATE_BITS robotState;
 
 unsigned int talon = 50;
-float acceleration=1;
+float acceleration=3;
 void PWMUpdateSpeed()
 {
 // Cette fonction est appelee sur timer et permet de suivre des rampes d acceleration
