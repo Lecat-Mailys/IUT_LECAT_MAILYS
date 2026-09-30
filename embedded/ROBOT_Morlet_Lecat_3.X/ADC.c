@@ -80,7 +80,7 @@ void __attribute__((interrupt, no_auto_psv)) _AD1Interrupt(void) {
     ADCResult[3] = ADC1BUF3;
     ADCResult[4] = ADC1BUF4;
     ADCConversionFinishedFlag = 1;
-}
+              }
 
 void ADC1StartConversionSequence() {
     AD1CON1bits.SAMP = 1; //Lance une acquisition ADC
