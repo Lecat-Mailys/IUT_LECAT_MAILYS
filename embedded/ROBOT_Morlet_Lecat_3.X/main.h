@@ -22,6 +22,9 @@
 #define LED_ORANGE_2 _LATK15 
 #define LED_ROUGE_2 _LATA10
 #define LED_VERTE_2 _LATH3
+#define BTN _RH0
+
+
 #define FCY 60000000
 #define STATE_ATTENTE 0
 #define STATE_ATTENTE_EN_COURS 1

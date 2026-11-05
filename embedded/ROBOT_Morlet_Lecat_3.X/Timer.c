@@ -5,6 +5,7 @@
 #include "ADC.h"
 #include "main.h"
 unsigned long timestamp;
+volatile unsigned long tps_btn=0;
 //Initialisation d?un timer 16 bits
 void SetFreqTimer1(float freq) {
     T1CONbits.TCKPS = 0b00; //00 = 1:1 prescaler value
@@ -33,7 +34,7 @@ void InitTimer1(void) {
     //00 = 1:1 prescale value
     T1CONbits.TCS = 0; //clock source = internal clock
     //PR1 = 0x927C;
-      SetFreqTimer1(75);
+      SetFreqTimer1(500);
     IFS0bits.T1IF = 0; // Clear Timer Interrupt Flag
     IEC0bits.T1IE = 1; // Enable Timer interrupt
     T1CONbits.TON = 1; // Enable Timer
@@ -49,6 +50,8 @@ void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void) {
 
     ADC1StartConversionSequence();
     PWMUpdateSpeed();
+    
+    
 }
 //Initialisation d?un timer 32 bits
 
@@ -126,4 +129,5 @@ void __attribute__((interrupt, no_auto_psv)) _T4Interrupt(void) {
     IFS1bits.T4IF = 0;
     timestamp ++;
     OperatingSystemLoop();
+    tps_btn++;
 }
